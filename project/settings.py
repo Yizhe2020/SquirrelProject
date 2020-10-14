@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f+j=p245nq=acbx5t)$rm)f-c*#i!@n_kg=rt5k8-d1*hm*#g#'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,3 +118,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if os.environ.get('GAE_APPLICATION'):
+    GS_DEFAULT_ACL = 'publicRead'
+    DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME')
+    MEDIA_URL = f'https://storage.cloud.google.com/{GS_BUCKET_NAME}/'
+    STATIC_URL = f'https://storage.cloud.google.com/{GS_BUCKET_NAME}/'
