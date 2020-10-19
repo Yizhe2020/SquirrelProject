@@ -9,4 +9,8 @@ def home_page(request):
 def map(request):
     plot = Data.objects.all()[:100]
     return render(request,'squirrel/map.html',{'Plot': plot})
+
+def sightings(request):
+    data = Data.objects.all()
+    return render(request,'squirrel/sightings.html',{'Sightings': sightings})
 # Create your views here.
