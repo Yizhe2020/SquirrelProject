@@ -11,6 +11,6 @@ def map(request):
     return render(request,'squirrel/map.html',{'Plot': plot})
 
 def sightings(request):
-    data = Data.objects.all()
-    return render(request,'squirrel/sightings.html',{'Sightings': sightings})
+    squirrel = Data.objects.all()
+    return render(request,'squirrel/sightings.html',{'Squirrel': squirrel})
 # Create your views here.
