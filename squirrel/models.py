@@ -143,7 +143,7 @@ class Data(models.Model):
         help_text = _('whether the squirrel runs from or not'),
     )    
 
-    def _str_(self):
+    def __str__(self):
         return self.Unique_Squirrel_ID
 
 #Create your models here.
