@@ -11,9 +11,9 @@ class Data(models.Model):
     )
 
     Unique_Squirrel_ID = models.CharField(
-        max_length = 14,
-        primary_key = True,
+        max_length = 100,
         help_text = _('Unique Squirrel ID'),
+        primary_key = True,
     )
 
     PM = 'PM'
@@ -47,6 +47,7 @@ class Data(models.Model):
         choices = AGE_CHOICES,
         help_text=_('Age of Squirrel'),
         blank = True,
+        null = True,
     )
 
     GRAY = 'Gray'
@@ -64,6 +65,7 @@ class Data(models.Model):
         choices = COLOR_CHOICES,
         help_text=_('Color of Squirrel'),
         blank = True,
+        null = True,
     )
 
     GROUND_PLANE = 'Ground Plane'
@@ -78,6 +80,7 @@ class Data(models.Model):
         max_length = 20,
         choices = LOCATION_CHOICES,
         blank = True,
+        null = True,
     )
 
     Specific_Location = models.TextField(
@@ -86,27 +89,22 @@ class Data(models.Model):
 
     Running = models.BooleanField(
         help_text = _('whether the squirrel is running or not'),
-        default = False,
     )
 
     Chasing = models.BooleanField(
         help_text = _('whether the squirrel is chasing or not'),
-        default = False,
     )
 
     Climbing = models.BooleanField(
         help_text = _('whether the squirrel is climbing or not'),
-        default = False,
     )
 
     Eating = models.BooleanField(
         help_text = _('whether the squirrel is eating or not'),
-        default = False,
     )
 
     Foraging = models.BooleanField(
         help_text = _('whether the squirrel is foraging or not'),
-        default = False,
     )
 
     Other_Activity = models.TextField(
@@ -115,42 +113,34 @@ class Data(models.Model):
     
     Kuks = models.BooleanField(
         help_text = _('whether the squirrel has kuks or not'),
-        default = False,
     )
 
     Quaas = models.BooleanField(
         help_text = _('whether the squirrel has quaas or not'),
-        default = False,
     )
 
     Moans = models.BooleanField(
         help_text = _('whether the squirrel has moans or not'),
-        default = False,
     )
 
     Tail_Flags = models.BooleanField(
         help_text = _('whether the squirrel has tail falgs or not'),
-        default = False,
     )
 
     Tail_Twitches = models.BooleanField(
         help_text = _('whether the squirrel has tail twitches or not'),
-        default = False,
     )
 
     Approaches = models.BooleanField(
         help_text = _('whether the squirrel has approaches or not'),
-        default = False,
     )
 
     Indifferent = models.BooleanField(
         help_text = _('whether the squirrel is indifferent or not'),
-        default = False,
     )
 
     Runs_From = models.BooleanField(
         help_text = _('whether the squirrel runs from or not'),
-        default = False,
     )    
 
     def _str_(self):
