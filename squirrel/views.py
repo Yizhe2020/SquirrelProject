@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Data
-from .form
+from .form import UpdateForm, CreateForm
+
 def home_page(request):
     squirrels = 'Squirrel Tracker'
     return render(request,'squirrel/index.html',{'Squirrels': squirrels})
