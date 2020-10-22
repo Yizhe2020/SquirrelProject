@@ -1,19 +1,18 @@
 # Squirrel-Tracker
 
 ## Background Description
-This is a web-app to keep track of all the known squirrels in Central Park. We used 2018 Central Park Squirrel Census data. The users are allowed to add, update and view squirrel data.This web-app is created based on Django framework and Python3 tools.  
+This is a web-app to keep track of all the known squirrels in Central Park. The users are allowed to view, update and add squirrel data. This web-app is created based on Django framework and Python3 tools.  
 
 ### L&Z:
 #### UNIs: [yl4559, jz3282]
 * Yizhe Li: yl4559
 * Jiaqi Zhu: jz3282
 
-## Functions
-The app provides users a map displaying locations of the squirrel sightings in Central Park. In additions, users can view, update and add the sightings of squirrels as well as view some general statistics of squirrels data. 
-
+## Features
 ### Main page
 * Link to Map can be found at this page
 * Link to Sightings can be found at this page
+* Link to add can be found at this page
 * Link to general stats of all squirrels can be found at this page
 ```bash
 Located at: /
