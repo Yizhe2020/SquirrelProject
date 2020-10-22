@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.shortcuts import get_object_or_404
 from .models import Data
 from .forms import UpdateForm, CreateForm
 
@@ -19,7 +18,7 @@ def sightings(request):
 def update_sightings(request,Unique_Squirrel_ID):
     squirrels = Data.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method == 'POST':
-        form = UpdateForm(request.POST)
+        form = UpdateForm(request.POST, instance = squirrels)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/sightings/')
