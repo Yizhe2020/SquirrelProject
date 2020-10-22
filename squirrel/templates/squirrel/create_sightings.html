@@ -28,8 +28,9 @@
     <h1>Add a New Squirrel</h1>
     <form  method= 'post' >
 	{% csrf_token %}
-	{{Form.as_p}}
-
+	<table border = 1>
+	{{Form.as_table}}
+	</table>
 	<button type="submit">Submit</button>
 
     </form>
