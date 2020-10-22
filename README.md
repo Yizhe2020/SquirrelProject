@@ -3,7 +3,7 @@
 ## Background Description
 This is a web-app to keep track of all the known squirrels in Central Park. The users are allowed to view, update and add squirrel data. This web-app is created based on Django framework and Python3 tools.  
 
-### L&Z:
+### Project Group: L&Z, Section 001
 #### UNIs: [yl4559, jz3282]
 * Yizhe Li: yl4559
 * Jiaqi Zhu: jz3282
