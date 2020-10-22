@@ -22,13 +22,13 @@ class Command(BaseCommand):
                 'Primary Fur Color','Location','Specific Location','Running','Chasing','Climbing','Eating','Foraging',
                 'Other Activity','Kuks','Quaas','Moans','Tail Flags','Tail Twitches','Approaches',
                 'Indifferent','Runs_From'])
-            for obj in Data.objects.all().values_list('Latitude','Longitude','Unique_Squirrel_ID','Shift','Date','Age',
+            for i in Data.objects.all().values_list('Latitude','Longitude','Unique_Squirrel_ID','Shift','Date','Age',
                 'Primary_Fur_Color','Location','Specific_Location','Running','Chasing','Climbing','Eating','Foraging',
                 'Other_Activity','Kuks','Quaas','Moans','Tail_Flags','Tail_Twitches','Approaches',
                 'Indifferent','Runs_From'):
-                writer.writerow(obj)
+                writer.writerow(i)
 
             csvfile.close()
 
-        msg = f'you are exporting from {file_}'
+        msg = f'you are exporting to {file_}'
         self.stdout.write(self.style.SUCCESS(msg))
