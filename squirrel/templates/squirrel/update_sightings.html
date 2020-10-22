@@ -11,21 +11,21 @@
     <title>Feel Free to Update!</title>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Squirrel-Tracker</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="/sightings/">Sightings</a>
-      <a class="nav-link" href="/map/">Map</a>
-      <a class="nav-link" href="/sightings/add/">Add</a>
-      <a class="nav-link" href="/sightings/stats/">Stats</a>
-    </div>
-  </div>
-</nav>	  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Squirrel-Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/sightings/">Sightings</a>
+          <a class="nav-link" href="/map/">Map</a>
+          <a class="nav-link" href="/sightings/add/">Add</a>
+          <a class="nav-link" href="/sightings/stats/">Stats</a>
+        </div>
+      </div>
+    </nav>	  
     <h1>Feel Free to Update! :)</h1>
     <form  method= 'post' >
       {% csrf_token %}
@@ -33,9 +33,9 @@
       {{Form.as_table}}
       </table>
 
-   <button type="submit">Update</button>
+    <button type="submit">Update</button>
 
-</form>
+    </form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
