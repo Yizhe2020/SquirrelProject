@@ -17,7 +17,7 @@ def sightings(request):
     return render(request,'squirrel/sightingslist.html',{'Squirrel': squirrels})
 
 def update_sightings(request,Unique_Squirrel_ID):
-    squirrels = Data.objects.filter(Unique_Squirrel_ID=Unique_Squirrel_ID).first()
+    squirrels = Data.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method == 'POST':
         form = UpdateForm(request.POST)
         if form.is_valid():
