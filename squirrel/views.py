@@ -21,7 +21,7 @@ def sightings(request):
 def update_sightings(request,Unique_Squirrel_ID):
     squirrels = Data.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method == 'POST':
-        form = UpdateForm(request.POST)
+        form = UpdateForm(request.POST, instance = squirrels)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/sightings/')
