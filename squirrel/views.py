@@ -39,7 +39,7 @@ def create_sightings(request):
 
 def stats(request):
     squirrels = Data.objects.all()
-    AM_Count = squirrels.filter(shift = "AM").count()
+    AM_Count = squirrels.filter(Shift = "AM").count()
     PM_Count = squirrels.filter(Shift = 'PM').count()
     Cinnamon_Count = squirrels.filter(Primary_Fur_Color = 'Cinnamon').count()
     Eating_Count = squirrels.filter(Eating = 'True').count()
