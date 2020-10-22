@@ -39,12 +39,13 @@ def create_sightings(request):
 
 def stats(request):
     squirrels = Data.objects.all()
+    AM_Count = squirrels.filter(shift = "AM").count()
     PM_Count = squirrels.filter(Shift = 'PM').count()
     Cinnamon_Count = squirrels.filter(Primary_Fur_Color = 'Cinnamon').count()
     Eating_Count = squirrels.filter(Eating = 'True').count()
     Moans_Count = squirrels.filter(Moans = 'True').count()
     Indifferent_Count = squirrels.filter(Indifferent = 'True').count()
-    return render(request,'squirrel/stats.html', {'PM_Count': PM_Count, 'Cinnamon_Count': Cinnamon_Count, 'Eating_Count': Eating_Count,
+    return render(request,'squirrel/stats.html', {"AM_Count": AM_Count, 'PM_Count': PM_Count, 'Cinnamon_Count': Cinnamon_Count, 'Eating_Count': Eating_Count,
         'Moans_Count': Moans_Count, 'Indifferent_Count': Indifferent_Count})
 
 
