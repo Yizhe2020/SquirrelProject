@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from .models import Data
 from .forms import UpdateForm, CreateForm
 
@@ -15,15 +16,15 @@ def sightings(request):
     squirrels = Data.objects.all()
     return render(request,'squirrel/sightingslist.html',{'Squirrel': squirrels})
 
-def update_sightings(request, Unique_Squirrel_ID):
-    data = Data.objects.filter(Unique_Squirrel_ID = Unique_Squirrel_ID).first()
+def update_sightings(request,Unique_Squirrel_ID):
+    squirrels = Data.objects.filter(Unique_Squirrel_ID=Unique_Squirrel_ID).first()
     if request.method == 'POST':
         form = UpdateForm(request.POST)
         if form.is_valid():
-            form.save(commit = True)
+            form.save()
             return HttpResponseRedirect('/sightings/')
     else:
-        form = UpdateForm(instance = data)
+        form = UpdateForm(instance = squirrels)
     return render(request,'squirrel/update_sightings.html', {'Form': form})
 
 def create_sightings(request):
