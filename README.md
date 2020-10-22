@@ -27,7 +27,7 @@ Located at: /sightings/
 #### Update sightings
 Details of all squirrels sightings and request of updating the information of those can be found at this page.
 ```bash
-Located at: /sightings/Unique_Squirrel_ID/
+Located at: /sightings/<Unique_Squirrel_ID>/
 ```
 
 #### Create sightings

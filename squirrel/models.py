@@ -28,7 +28,6 @@ class Data(models.Model):
         max_length = 2,
         choices = SHIFT_CHOICES,
         help_text = _('Shift choice'),
-        default = PM,
     )
 
     Date = models.DateField(
