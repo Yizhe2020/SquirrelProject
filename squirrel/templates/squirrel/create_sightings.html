@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf8'>
-</head>
-<body>
-    <p> 
-        hi!!!
-    </p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Feel free to add</h1>
+    <form  method= 'post' >
+	{% csrf_token %}
+        {{Form.as_p}}
+    <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
 ~       

@@ -16,14 +16,14 @@ def sightings(request):
     return render(request,'squirrel/sightingslist.html',{'Squirrel': squirrels})
 
 def update_sightings(request, Unique_Squirrel_ID):
-    squirrels = Data.objects.get(Unique_Squirrel_ID = Unique_Squirrel_ID)
+    data = Data.objects.filter(Unique_Squirrel_ID = Unique_Squirrel_ID).first()
     if request.method == 'POST':
         form = UpdateForm(request.POST)
         if form.is_valid():
-            form.save()
+            form.save(commit = True)
             return HttpResponseRedirect('/sightings/')
     else:
-        form = UpdateForm(instance = squirrels)
+        form = UpdateForm(instance = data)
     return render(request,'squirrel/update_sightings.html', {'Form': form})
 
 def create_sightings(request):
