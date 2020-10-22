@@ -14,7 +14,6 @@ class Data(models.Model):
         max_length = 40,
         help_text = _('Unique Squirrel ID'),
         primary_key = True,
-        unique = True
     )
 
     PM = 'PM'
