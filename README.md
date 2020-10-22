@@ -12,8 +12,9 @@ This is a web-app to keep track of all the known squirrels in Central Park. We u
 The app provides users a map displaying locations of the squirrel sightings in Central Park. In additions, users can view, update and add the sightings of squirrels as well as view some general statistics of squirrels data. 
 
 ### Main page
-* Link to Map can be found at this page: click to view a map of 100 squirrels sightings in Central Park
-* Link to Sightings can be found at this page: click to view a list of all squirrels with their recorded date
+* Link to Map can be found at this page
+* Link to Sightings can be found at this page
+* Link to general stats of all squirrels can be found at this page
 ```bash
 Located at: /
 ```
@@ -64,8 +65,5 @@ python manage.py import_squirrels /path/to/file.csv
 ```bash 
 sudo home/username/SquirrelProject/env/bin/python manage.py runserver 0.0.0.0:80
 ```
-* After browsing, you can export data in csv form using:
-```bash
-python manage.py export_squirrels /path/to/file.csv
-```
+
 
