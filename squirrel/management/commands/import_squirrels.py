@@ -21,6 +21,7 @@ class Command(BaseCommand):
                 obj.Latitude = item['X']
                 obj.Longitude = item['Y']
                 obj.Unique_Squirrel_ID = item['Unique Squirrel ID']
+                obj.Shift = item['Shift']
                 temp = item['Date']
                 date_str = temp[-4:]+'-'+temp[:2]+'-'+temp[2:4]
                 obj.Date = datetime.datetime.strptime(date_str, '%Y-%m-%d')
