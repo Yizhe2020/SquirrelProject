@@ -17,7 +17,6 @@ class Command(BaseCommand):
         with open(file_) as fp:
             reader = csv.DictReader(fp)
             for item in reader:
-                obj = Data()
                 obj.Latitude = item['X']
                 obj.Longitude = item['Y']
                 obj.Unique_Squirrel_ID = item['Unique Squirrel ID']
