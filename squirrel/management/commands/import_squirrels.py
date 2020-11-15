@@ -17,6 +17,7 @@ class Command(BaseCommand):
         with open(file_) as fp:
             reader = csv.DictReader(fp)
             for item in reader:
+                obj =Data()
                 obj.Latitude = item['X']
                 obj.Longitude = item['Y']
                 obj.Unique_Squirrel_ID = item['Unique Squirrel ID']
@@ -44,7 +45,6 @@ class Command(BaseCommand):
                 obj.Runs_From = item['Runs from'] == 'true'
 
                 obj.save()
-
         msg = f'you are importing from {file_}'
 
         self.stdout.write(self.style.SUCCESS(msg))
